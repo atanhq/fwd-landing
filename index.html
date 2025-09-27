@@ -3,27 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
     <!-- CSS STYLES -->
-     <link rel="stylesheet" href="styles/normalize-fwd.css">
+    <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Landing Page</title> <!-- change title of page -->
 </head>
+
 <body>
     <header>
+        <!-- LOGO -->
+        <a href="index.html"><img src="https://placehold.co/50x50/png"></a>
+
+        <!-- NAVIGATION MENU -->
         <nav>
-            <!-- navigation links here -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="index.html">Work</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
+
+
     <main>
-        <section>
-            <!-- section stuff here -->
+        <!-- GREETING SECTION -->
+        <section class="section-greeting">
+            <img src="https://placehold.co/600x400/png">
+
+            <h1>hey, i'm tan</h1>
+            <p>i'm a web development student based in vancouver, british columbia. when i'm not coding, i'm writing stories, sketching portraits, and leaning languages—the spoken kind!</p>
+
+            <a href="">let's chat</a>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="section-projects">
+            <h2>projects</h2>
+
+            <article class="projects">
+                <h3>HTML / CSS Projects:</h3>
+                <p>Country Website, Business Website, etc.</p>
+                <a href="">more</a>
+            </article>
+
+            <article class="projects">
+                <h3>Javascript Projects:</h3>
+                <p>JavaScript Game, Movie Database, etc.</p>
+                <a href="">more</a>
+            </article>
+
+            <article class="projects">
+                <h3>WordPress Sites:</h3>
+                <p>Vancouver, Mindset, School</p>
+                <a href="">more</a>
+            </article>
+
+            <article class="projects">
+                <h3>Online Shops:</h3>
+                <p>Shopify Store, WooCommerce Store</p>
+                <a href="">more</a>
+            </article>
+        </section>
+
+        <!-- CONTACT ME SECTION -->
+        <section class="contact">
+            <fieldset>
+                <legend>Let's chat</legend>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your name..." required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Your email..." required>
+
+                <label for="inquiry">What can I help you with?</label>
+                <textarea name="inquiry" id="inquiry" placeholder="Describe your ideal website..." required></textarea>
+
+                <input type="submit" value="Submit">
+            </fieldset>
         </section>
     </main>
 
+
+
     <footer>
-        <!-- footer here -->
+        <p>&copy; 2025</p>
+
+        <div class="footer-nav">
+            <nav>
+				<ul>
+					<li><a href="mailto:info@example.com"><img src="https://placehold.co/50x50/png"></a></li>
+					<li><a href="https://github.com/atanhq"><img src="https://placehold.co/50x50/png"></a></li>
+					<li><a href="https://www.linkedin.com/in/amtans/"><img src="https://placehold.co/50x50/png"></a></li>
+				</ul>
+			</nav>
+        </div>
     </footer>
+
 </body>
 </html>
