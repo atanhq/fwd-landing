@@ -4,3 +4,107 @@ body {
     line-height: 1.5;
 }
 
+h1 {
+	text-align: center;
+	font-size: 1.75rem;
+}
+
+/* --------- LOGO/NAVIGATION SECTION --------- */
+header {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.site-navigation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 4.5rem;  /* Matches the height of the .site-header */
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: #fff;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #282828;
+}
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+@media (min-width: 50em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-navigation {
+		flex: 1 1 auto;
+		padding: 0 1rem;
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		top: 0;
+	}
+
+	.site-navigation a {
+		line-height: 4.5rem; /* Matches the height of the .site-header */
+		padding: 0 1rem;
+	}
+
+}
+
+/* --------- GREETING/PROJECTS SECTION --------- */
+.greeting-blurb p {
+	font-size: 0.95rem;
+	margin: auto;
+	width: 60%;
+	text-align: justify;
+    text-align-last: center;
+}
+
+.greeting-link {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.25rem;
+}
+
+.greeting-link a {
+	padding: 0.5rem 3rem 0.7rem 3rem;
+	outline: 2px solid #cdcdcd;
+	border-radius: 30px;
+	text-decoration: none;
+}
+
+.greeting-link a:hover {
+	color: #eee;
+	background-color: black;
+	outline: none;
+}

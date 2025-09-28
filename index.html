@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>nana tan | designs</title>
 
-    <!-- CSS STYLES -->
+    <!-- CSS/JAVASCRIPT -->
     <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/navigation.js" defer></script>
+
 </head>
 
 <body>
+
     <header>
         <!-- LOGO -->
         <a href="index.html"><img src="https://placehold.co/50x50/png"></a>
 
-        <!-- NAVIGATION MENU -->
-        <nav>
-            <ul>
+        <!-- NAVIGATION taken from products.html -->
+        <nav class="site-navigation" id="site-navigation">
+            <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" aria-label="Menu Toggle">
+				<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
+					<title>Menu Icon</title>
+					<path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path>
+				</svg>
+			</button>
+
+            <ul class="nav-menu" id="header-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html">About</a></li>
                 <li><a href="index.html">Work</a></li>
@@ -27,16 +37,19 @@
     </header>
 
 
-
     <main>
         <!-- GREETING SECTION -->
-        <section class="section-greeting">
+        <section>
             <img src="https://placehold.co/600x400/png">
 
-            <h1>hey, i'm tan</h1>
-            <p>i'm a web development student based in vancouver, british columbia. when i'm not coding, i'm writing stories, sketching portraits, and leaning languages—the spoken kind!</p>
+            <div class="greeting-blurb">
+                <h1>hey, i'm nana</h1>
+                <p>i'm a web development student based in vancouver, british columbia. when i'm not coding, i'm writing stories, sketching portraits, and learning languages—the spoken kind!</p>
+            </div>
 
-            <a href="">let's chat</a>
+            <div class="greeting-link">
+                <p><a href="#chat">let's chat</a></p>
+            </div>
         </section>
 
         <!-- PROJECTS SECTION -->
@@ -69,7 +82,7 @@
         </section>
 
         <!-- CONTACT ME SECTION -->
-        <section class="contact">
+        <div id="chat">
             <fieldset>
                 <legend>Let's chat</legend>
                 <label for="name">Name</label>
@@ -83,7 +96,7 @@
 
                 <input type="submit" value="Submit">
             </fieldset>
-        </section>
+        </div>
     </main>
 
 
