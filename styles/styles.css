@@ -4,17 +4,27 @@ body {
     line-height: 1.5;
 }
 
-h1 {
+h1, h2 {
 	text-align: center;
+}
+
+h1 {
 	font-size: 1.75rem;
+}
+
+h2 {
+	font-size: 1.5rem;
 }
 
 /* --------- LOGO/NAVIGATION SECTION --------- */
 header {
-	padding: 1rem;
+	padding: 1rem 1rem 0.8rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: sticky;
+	top: 0;
+	background-color: #fff;
 }
 
 .site-navigation ul {
@@ -81,7 +91,8 @@ header {
 
 }
 
-/* --------- GREETING/PROJECTS SECTION --------- */
+
+/* --------- GREETING SECTION --------- */
 .greeting-blurb p {
 	font-size: 0.95rem;
 	margin: auto;
@@ -101,10 +112,132 @@ header {
 	outline: 2px solid #cdcdcd;
 	border-radius: 30px;
 	text-decoration: none;
+	font-weight: 700;
 }
 
 .greeting-link a:hover {
-	color: #eee;
+	color: #fff;
 	background-color: black;
 	outline: none;
+	transition: 0.5s;
+}
+
+
+/* --------- PROJECTS SECTION --------- */
+.projects-head {
+	background-color: #eee;
+	margin-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.projects-head h2 {
+	padding: 1.5rem 0 0.5rem 0;
+}
+
+.section-projects {
+	background-color: #eee;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.section-projects h2 {
+	margin-top: 1rem;
+	padding-top: 1.5rem;
+}
+
+.projects {
+	background-color: #fff;
+	max-width: 15.625rem;
+	margin: auto;
+	padding-bottom: 2rem;
+}
+
+.projects h3 {
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.projects-link {
+	display: flex;
+	justify-content: center;
+}
+
+.projects-link a {
+	padding: 0.2rem 1.5rem 0.4rem 1.5rem;
+	border-radius: 30px;
+	text-decoration: none;
+	background-color: #000;
+	color: #fff;
+	font-weight: 700;
+}
+
+.projects-link a:hover {
+	background-color: #eee;
+	color: #000;
+	transition: 0.5s;
+}
+
+
+/* --------- CONTACT SECTION --------- */
+
+fieldset {
+	margin: 2rem auto;
+	border: none;
+	text-transform: lowercase;
+	max-width: 30%;
+	display: flex;
+	flex-direction: column;
+}
+
+legend {
+	margin: auto;
+	font-size: 1.75rem;
+	font-weight: 700;
+}
+
+label {
+	display: block;
+	padding-top: 1rem;
+}
+
+input[type=submit] {
+	margin: 2rem auto;
+	display: block;
+	background-color: #000;
+  	border: none;
+  	padding: 0.3rem 2rem 0.5rem 2rem;
+	border-radius: 30px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+}
+
+
+/* --------- FOOTER SECTION --------- */
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	background-color: #eee;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+footer p {
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+footer img {
+	vertical-align: middle;
 }
