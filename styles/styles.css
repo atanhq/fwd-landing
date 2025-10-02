@@ -1,19 +1,33 @@
-body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 10rem;
 }
 
-h1, h2 {
+body {
+    font-family: 'Kumbh Sans','Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+	color: #202020;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+}
+
+h1, h2, h3 {
 	text-align: center;
 }
 
 h1 {
 	font-size: 1.75rem;
+	font-family: 'Merienda', 'Segoe UI', sans-serif;
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+	letter-spacing: 0;
 }
 
 .wrap {
@@ -23,8 +37,7 @@ h2 {
 
 a,
 a:visited {
-	text-transform: lowercase;
-	color: #000;
+	color: #202020;
 }
 
 a:hover,
@@ -35,13 +48,19 @@ a:active {
 
 /* --------- LOGO/NAVIGATION SECTION --------- */
 header {
-	padding: 1rem 1rem 1rem 3rem;
+	padding: 1rem 1rem 1rem 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	position: sticky;
 	top: 0;
 	background-color: #fff;
+	box-shadow: 0px 0px 5px #cdcdcd;
+}
+
+header img {
+	height: 2rem;
+	width: 2rem;
 }
 
 .site-navigation ul {
@@ -69,17 +88,12 @@ header {
 .site-navigation a {
 	display: block;
 	padding: 1rem;
-	font-family: Georgia, Times, "Times New Roman", serif;
 	font-size: 1.5rem;
 	text-decoration: none;
-	color: #282828;
+	color: #222222;
 }
 
-.site-navigation a:hover {
-	letter-spacing: 2px;
-	color: #868686;
-	transition: 0.5s;
-}
+
 
 .menu-toggle {
 	display: block;
@@ -116,6 +130,26 @@ header {
 		padding: 0 1rem;
 	}
 
+	.site-navigation a:hover {
+	letter-spacing: 2px;
+	color: #868686;
+	transition: 0.5s;
+	}
+
+	header {
+		padding-left: 2rem;
+	}
+
+	header img {
+	height: 5rem;
+	width: 5rem;
+	padding: 1rem;
+	}
+
+	header img:hover {
+	opacity: 0.5;
+	transition: 0.5s;
+	}
 }
 
 
@@ -123,9 +157,10 @@ header {
 .greeting-blurb p {
 	font-size: 0.95rem;
 	margin: auto;
-	width: 60%;
+	max-width: 15rem;
 	text-align: justify;
     text-align-last: center;
+	letter-spacing: 0;
 }
 
 .greeting-blurb h1 {
@@ -144,27 +179,44 @@ header {
 	border-radius: 30px;
 	text-decoration: none;
 	font-weight: 700;
-	color: #000;
+	color: #222222;
+	letter-spacing: 0;
 }
 
 .greeting-link a:hover {
 	color: #fff;
-	background-color: black;
+	background-color: #222222;
 	outline: none;
 	transition: 0.5s;
 }
 
+.greeting img {
+	min-height: 16rem;
+	object-fit: cover;
+	width: 100%;
+}
+
 @media (min-width: 50em) {
 	.greeting-blurb p {
-		max-width: 22rem;
+		max-width: 40rem;
 		top: 400px;
+		text-align: center;
+	}
+
+	.greeting h1 {
+		font-size: 2.5rem;
+	}
+
+	.greeting p {
+		font-size: 1.25rem;
+		letter-spacing: 1px;
 	}
 }
 
 
 /* --------- PROJECTS SECTION --------- */
 .projects-head {
-	background-color: #eee;
+	background-color: #f8f8f8;
 	margin-top: 2rem;
 	padding-bottom: 2rem;
 }
@@ -174,7 +226,7 @@ header {
 }
 
 .section-projects {
-	background-color: #eee;
+	background-color: #f8f8f8;
 	display: flex;
 	justify-content: end;
 	align-content: center;
@@ -188,11 +240,7 @@ header {
 	max-width: 15.625rem;
 	margin: auto;
 	padding-bottom: 2rem;
-}
-
-.projects h3 {
-	text-align: center;
-	text-transform: lowercase;
+	box-shadow: 0px 0px 5px #cdcdcd;
 }
 
 .projects-link {
@@ -204,24 +252,22 @@ header {
 	padding: 0.2rem 1.5rem 0.4rem 1.5rem;
 	border-radius: 30px;
 	text-decoration: none;
-	background-color: #000;
+	background-color: #222222;
 	color: #fff;
 	font-weight: 700;
 }
 
 .projects-link a:hover {
 	background-color: #eee;
-	color: #000;
+	color: #202020;
 	transition: 0.5s;
 }
 
 
 /* --------- CONTACT SECTION --------- */
-
 fieldset {
 	margin: 3rem auto;
 	border: none;
-	text-transform: lowercase;
 	max-width: 30%;
 	display: flex;
 	flex-direction: column;
@@ -236,56 +282,68 @@ legend {
 label {
 	display: block;
 	padding-top: 1rem;
+	font-weight: 700;
 }
 
 input[type="submit"] {
 	margin: 2rem auto;
 	display: block;
-	background-color: #000;
+	background-color: #222222;
   	border: none;
   	padding: 0.3rem 2rem 0.5rem 2rem;
 	border-radius: 30px;
 	text-decoration: none;
 	color: #fff;
 	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 
 /* --------- FOOTER SECTION --------- */
 footer {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
 	padding: 1.5rem 2rem;
-	background-color: #eee;
+	background-color: #f8f8f8;
+	text-transform: uppercase;
 }
 
-nav ul {
+.footer-nav ul {
 	padding: 0;
 }
 
-nav li {
+.footer-nav li {
 	display: inline-block;
 	padding: 0 0.2rem;
 	font-size: 2rem;
 }
 
-nav a {
+.footer-nav a {
 	padding: 0.75rem 0.75rem;
-}
-
-nav a:hover {
-	color: #868686;
-	transition: 0.5s;
-}
+	}
 
 footer p {
 	font-size: 0.8rem;
 	font-weight: 700;
+	position: relative;
+	top: 1rem;
 }
 
-footer img {
-	vertical-align: middle;
+
+@media (min-width: 50em) {
+	footer {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	footer p {
+		position: relative;
+		top: 0;
+	}
+
+	nav a:hover {
+	color: #868686;
+	transition: 0.5s;
+	}
 }
-
-
