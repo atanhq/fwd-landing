@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Kumbh Sans','Segoe UI', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
 	color: #202020;
@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 1.75rem;
-	font-family: 'Merienda', 'Segoe UI', sans-serif;
+	font-family: 'Merienda', sans-serif;
 }
 
 h2 {
@@ -28,11 +28,6 @@ h2 {
 h3 {
 	font-size: 1.3rem;
 	letter-spacing: 0;
-}
-
-.wrap {
-	max-width: 120rem;
-	margin: 0 auto;
 }
 
 a,
@@ -46,9 +41,15 @@ a:active {
 	text-decoration: underline;
 }
 
-/* --------- LOGO/NAVIGATION SECTION --------- */
+.wrap {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+
+/* --------- HEADER/NAVIGATION --------- */
 header {
-	padding: 1rem 1rem 1rem 1rem;
+	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,8 +60,8 @@ header {
 }
 
 header img {
-	height: 2rem;
-	width: 2rem;
+	height: 3rem;
+	width: 3rem;
 }
 
 .site-navigation ul {
@@ -73,7 +74,6 @@ header img {
 	top: 4.5rem;
 	left: 0;
 	right: 0;
-	z-index: 2;
 	background-color: #fff;
 }
 
@@ -92,8 +92,6 @@ header img {
 	text-decoration: none;
 	color: #222222;
 }
-
-
 
 .menu-toggle {
 	display: block;
@@ -126,14 +124,14 @@ header img {
 	}
 
 	.site-navigation a {
-		line-height: 4.5rem; /* Matches the height of the .site-header */
+		line-height: 4.5rem;
 		padding: 0 1rem;
 	}
 
 	.site-navigation a:hover {
-	letter-spacing: 2px;
-	color: #868686;
-	transition: 0.5s;
+		letter-spacing: 2px;
+		color: #868686;
+		transition: 0.5s;
 	}
 
 	header {
@@ -141,19 +139,29 @@ header img {
 	}
 
 	header img {
-	height: 5rem;
-	width: 5rem;
-	padding: 1rem;
+		height: 5rem;
+		width: 5rem;
+		padding: 1rem;
 	}
 
 	header img:hover {
-	opacity: 0.5;
-	transition: 0.5s;
+		opacity: 0.5;
+		transition: 0.5s;
 	}
 }
 
 
-/* --------- GREETING SECTION --------- */
+/* --------- BANNER/GREETING --------- */
+.greeting img {
+	min-height: 16rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.greeting-blurb h1 {
+	margin-top: 5rem;
+}
+
 .greeting-blurb p {
 	font-size: 0.95rem;
 	margin: auto;
@@ -163,18 +171,13 @@ header img {
 	letter-spacing: 0;
 }
 
-.greeting-blurb h1 {
-	margin-top: 5rem;
-}
-
 .greeting-link {
-	display: flex;
-	justify-content: center;
-	margin: 1.25rem 0 5rem 0;
+	text-align: center;
+	margin: 2.5rem 0 7rem;
 }
 
 .greeting-link a {
-	padding: 0.5rem 3rem 0.7rem 3rem;
+	padding: 0.5rem 3rem 0.7rem;
 	outline: 2px solid #cdcdcd;
 	border-radius: 30px;
 	text-decoration: none;
@@ -183,55 +186,42 @@ header img {
 	letter-spacing: 0;
 }
 
-.greeting-link a:hover {
-	color: #fff;
-	background-color: #222222;
-	outline: none;
-	transition: 0.5s;
-}
-
-.greeting img {
-	min-height: 16rem;
-	object-fit: cover;
-	width: 100%;
-}
-
 @media (min-width: 50em) {
+
 	.greeting-blurb p {
 		max-width: 40rem;
-		top: 400px;
 		text-align: center;
-	}
-
-	.greeting h1 {
-		font-size: 2.5rem;
-	}
-
-	.greeting p {
 		font-size: 1.25rem;
 		letter-spacing: 1px;
 	}
+
+	.greeting-blurb h1 {
+		font-size: 2.5rem;
+	}
+
+	.greeting-link a {
+		font-size: 1.5rem;
+	}
+
+	.greeting-link a:hover {
+		color: #fff;
+		background-color: #222222;
+		outline: none;
+		transition: 0.5s;
+	}
 }
 
 
-/* --------- PROJECTS SECTION --------- */
+/* --------- PROJECTS --------- */
 .projects-head {
 	background-color: #f8f8f8;
-	margin-top: 2rem;
-	padding-bottom: 2rem;
-}
-
-.projects-head h2 {
-	padding-top: 3rem;
+	padding-top: 2rem;
 }
 
 .section-projects {
-	background-color: #f8f8f8;
 	display: flex;
-	justify-content: end;
-	align-content: center;
 	flex-wrap: wrap;
-	padding: 2rem;
+	padding: 2rem 0 5rem;
 	gap: 2rem;
 }
 
@@ -239,34 +229,52 @@ header img {
 	background-color: #fff;
 	max-width: 15.625rem;
 	margin: auto;
-	padding-bottom: 2rem;
+	padding-bottom: 2.5rem;
 	box-shadow: 0px 0px 5px #cdcdcd;
 }
 
 .projects-link {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 }
 
 .projects-link a {
-	padding: 0.2rem 1.5rem 0.4rem 1.5rem;
+	padding: 0.2rem 1.5rem 0.4rem;
 	border-radius: 30px;
 	text-decoration: none;
 	background-color: #222222;
 	color: #fff;
 	font-weight: 700;
+	letter-spacing: 0;
 }
 
-.projects-link a:hover {
-	background-color: #eee;
-	color: #202020;
-	transition: 0.5s;
+@media (min-width: 50em) {
+
+	.section-projects {
+		max-width: 80rem;
+		margin: 0 auto;
+	}
+
+	.projects img:hover {
+		opacity: 0.5;
+		transition: 0.5s;
+	}
+
+	.projects-link a {
+		font-size: 1.2rem;
+	}
+
+	.projects-link a:hover {
+		background-color: #eee;
+		color: #202020;
+		transition: 0.5s;
+	}
+
 }
 
 
-/* --------- CONTACT SECTION --------- */
+/* --------- CONTACT FORM --------- */
 fieldset {
-	margin: 3rem auto;
+	margin: 5rem auto;
 	border: none;
 	max-width: 30%;
 	display: flex;
@@ -287,26 +295,32 @@ label {
 
 input[type="submit"] {
 	margin: 2rem auto;
-	display: block;
 	background-color: #222222;
-  	border: none;
-  	padding: 0.3rem 2rem 0.5rem 2rem;
-	border-radius: 30px;
-	text-decoration: none;
+	font-size: 1.25rem;
 	color: #fff;
+	text-decoration: none;
 	font-weight: 700;
-	letter-spacing: 1px;
+  	padding: 0.3rem 2rem 0.5rem 2rem;
+  	border: none;
+	border-radius: 30px;
 }
 
 
-/* --------- FOOTER SECTION --------- */
+/* --------- FOOTER --------- */
 footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1.5rem 2rem;
+	padding: 1.5rem 3rem;
 	background-color: #f8f8f8;
 	text-transform: uppercase;
+}
+
+footer p {
+	font-size: 0.8rem;
+	font-weight: 700;
+	position: relative;
+	top: 1rem;
 }
 
 .footer-nav ul {
@@ -321,17 +335,10 @@ footer {
 
 .footer-nav a {
 	padding: 0.75rem 0.75rem;
-	}
-
-footer p {
-	font-size: 0.8rem;
-	font-weight: 700;
-	position: relative;
-	top: 1rem;
 }
 
-
 @media (min-width: 50em) {
+	
 	footer {
 		flex-direction: row;
 		justify-content: space-between;
@@ -343,7 +350,7 @@ footer p {
 	}
 
 	nav a:hover {
-	color: #868686;
-	transition: 0.5s;
+		color: #868686;
+		transition: 0.5s;
 	}
 }
