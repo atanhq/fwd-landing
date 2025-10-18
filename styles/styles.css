@@ -129,9 +129,12 @@ header img {
 	}
 
 	.site-navigation a:hover {
-		letter-spacing: 2px;
-		color: #868686;
+		letter-spacing: 3px;
+		text-decoration: underline;
+		text-underline-offset: 0.5rem;
+		text-decoration-thickness: 5px;
 		transition: 0.5s;
+		font-weight: 500;
 	}
 
 	header {
@@ -347,10 +350,5 @@ footer p {
 	footer p {
 		position: relative;
 		top: 0;
-	}
-
-	nav a:hover {
-		color: #868686;
-		transition: 0.5s;
 	}
 }
